@@ -37,15 +37,12 @@ from tests.system.providers.amazon.aws.utils import (
     split_string,
 )
 
-DAG_ID = "DAG_AWS_Batch_GPUJob"
+DAG_ID = "DAG_AWS_Batch_1_CPUJob"
 
 # Externally fetched variables:
 ROLE_ARN_KEY = "ROLE_ARN"
 SUBNETS_KEY = "SUBNETS"
 SECURITY_GROUPS_KEY = "SECURITY_GROUPS"
-# ROLE_ARN_KEY = "arn:aws:iam::423119706339:role/apacheairflow"
-# SUBNETS_KEY = "arn:aws:ec2:us-east-1:423119706339:subnet/subnet-021fc2b97480c550b"
-# SECURITY_GROUPS_KEY = "sg-045c07b461601cd49"
 
 
 sys_test_context_task = (
