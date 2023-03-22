@@ -171,9 +171,9 @@ with DAG(
         state="ENABLED",
         compute_resources={
             "type": "FARGATE",
-            "maxvCpus": 10,
-            "securityGroupIds": security_groups,
-            "subnets": subnets,
+            "maxvCpus": 28,
+            "securityGroupIds": ["sg-045c07b461601cd49"],
+            "subnets": ["subnet-021fc2b97480c550b"],
         },
     )
     # [END howto_operator_batch_create_compute_environment]

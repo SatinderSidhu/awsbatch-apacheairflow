@@ -168,10 +168,14 @@ with DAG(
         environment_type="MANAGED",
         state="ENABLED",
         compute_resources={
-            "type": "FARGATE",
+            "type": "EC2",
+            "minvCpus": 4,
+            "maxvCpus": 128,
+            "desiredvCpus": 4,
+            "instanceTypes": ["m4"],
             "maxvCpus": 10,
-            "securityGroupIds": security_groups,
-            "subnets": subnets,
+            "securityGroupIds": ["sg-045c07b461601cd49"],
+            "subnets": ["subnet-021fc2b97480c550b"],
         },
     )
     # [END howto_operator_batch_create_compute_environment]
