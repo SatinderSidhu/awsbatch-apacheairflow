@@ -157,8 +157,8 @@ with DAG(
 
     # security_groups = split_string(test_context[SECURITY_GROUPS_KEY])
     # subnets = split_string(test_context[SUBNETS_KEY])
-    security_groups = "default"
-    subnets = "arn:aws:ec2:us-east-1:423119706339:subnet/subnet-021fc2b97480c550b"
+    security_groups = "[default]"
+    subnets = "[arn:aws:ec2:us-east-1:423119706339:subnet/subnet-021fc2b97480c550b]"
 
 
     # [START howto_operator_batch_create_compute_environment]
