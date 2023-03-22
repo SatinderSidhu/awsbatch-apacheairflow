@@ -155,10 +155,13 @@ with DAG(
     batch_job_compute_environment_name: str = f"{env_id}-test-job-compute-environment"
     batch_job_queue_name: str = f"{env_id}-test-job-queue"
 
-    # security_groups = split_string(test_context[SECURITY_GROUPS_KEY])
-    # subnets = split_string(test_context[SUBNETS_KEY])
-    security_groups = "sg-045c07b461601cd49"
-    subnets = "subnet-021fc2b97480c550b"
+    security_groups = split_string(test_context[SECURITY_GROUPS_KEY])
+    subnets = split_string(test_context[SUBNETS_KEY])
+    # security_groups = "sg-045c07b461601cd49"
+    # subnets = "subnet-021fc2b97480c550b"
+
+    print(security_groups)
+    print(subnets)
 
     # [START howto_operator_batch_create_compute_environment]
     create_compute_environment = BatchCreateComputeEnvironmentOperator(
