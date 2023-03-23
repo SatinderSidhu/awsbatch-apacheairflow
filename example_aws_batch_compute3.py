@@ -71,9 +71,6 @@ def create_job_definition(role_arn, job_definition_name):
                 {"value": "1", "type": "VCPU"},
                 {"value": "2048", "type": "MEMORY"},
             ],
-            "networkConfiguration": {
-                "assignPublicIp": "ENABLED",
-            },
         },
         jobDefinitionName=job_definition_name,
         platformCapabilities=["FARGATE"],
