@@ -37,7 +37,7 @@ from tests.system.providers.amazon.aws.utils import (
     split_string,
 )
 
-DAG_ID = "DAG_AWS_Batch_2_CPUJob"
+DAG_ID = "DAG_AWS_Batch_2_Fargate_20_cpu"
 
 # Externally fetched variables:
 ROLE_ARN_KEY = "ROLE_ARN"
