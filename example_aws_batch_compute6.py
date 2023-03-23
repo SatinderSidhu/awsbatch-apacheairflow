@@ -37,7 +37,7 @@ from tests.system.providers.amazon.aws.utils import (
     split_string,
 )
 
-DAG_ID = "DAG_AWS_Batch_4_ec2_t2.medium_2vcpu_4gb"
+DAG_ID = "DAG_AWS_Batch_6_ec2_m5a.xlarge_4vcpu_16gb"
 
 # Externally fetched variables:
 ROLE_ARN_KEY = "ROLE_ARN"
@@ -76,7 +76,7 @@ def create_job_definition(role_arn, job_definition_name):
             },
         },
         jobDefinitionName=job_definition_name,
-        platformCapabilities=["FARGATE"],
+        platformCapabilities=["EC2"],
     )
 
 
@@ -172,7 +172,7 @@ with DAG(
             "minvCpus": 4,
             "maxvCpus": 128,
             "desiredvCpus": 4,
-            "instanceTypes": ["t2.medium"],
+            "instanceTypes": ["m5a.xlarge"],
             "maxvCpus": 10,
             "securityGroupIds": ["sg-045c07b461601cd49"],
             "subnets": ["subnet-021fc2b97480c550b"],

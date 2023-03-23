@@ -76,7 +76,7 @@ def create_job_definition(role_arn, job_definition_name):
             },
         },
         jobDefinitionName=job_definition_name,
-        platformCapabilities=["FARGATE"],
+        platformCapabilities=["EC2"],
     )
 
 
