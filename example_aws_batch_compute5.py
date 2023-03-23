@@ -37,7 +37,7 @@ from tests.system.providers.amazon.aws.utils import (
     split_string,
 )
 
-DAG_ID = "DAG_AWS_Batch_4_CPUJob_ec2"
+DAG_ID = "DAG_AWS_Batch_5_CPUJob_ec2_m5.2xlarge"
 
 # Externally fetched variables:
 ROLE_ARN_KEY = "ROLE_ARN"
@@ -172,7 +172,7 @@ with DAG(
             "minvCpus": 4,
             "maxvCpus": 128,
             "desiredvCpus": 4,
-            "instanceTypes": ["c5.8xlarge"],
+            "instanceTypes": ["m5.2xlarge"],
             "maxvCpus": 10,
             "securityGroupIds": ["sg-045c07b461601cd49"],
             "subnets": ["subnet-021fc2b97480c550b"],
