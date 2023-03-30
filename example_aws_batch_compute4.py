@@ -167,10 +167,10 @@ with DAG(
         compute_resources={
             "type": "EC2",
             "minvCpus": 4,
-            "maxvCpus": 128,
+            "maxvCpus": 4,
             "desiredvCpus": 4,
             "instanceTypes": ["c5ad.xlarge"],
-            "maxvCpus": 10,
+            "maxvCpus": 4,
             "securityGroupIds": ["sg-045c07b461601cd49"],
             "subnets": ["subnet-021fc2b97480c550b"],
             "instanceRole": "ecsInstanceRole",

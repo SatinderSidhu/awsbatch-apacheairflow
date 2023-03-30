@@ -37,7 +37,7 @@ from tests.system.providers.amazon.aws.utils import (
     split_string,
 )
 
-DAG_ID = "DAG_AWS_Batch_7_ec2_r5n.xlarge_4cpu_64gb"
+DAG_ID = "DAG_AWS_Batch_7_ec2_r5b.12xlarge_48cpu_384gb"
 
 # Externally fetched variables:
 ROLE_ARN_KEY = "ROLE_ARN"
@@ -166,11 +166,11 @@ with DAG(
         state="ENABLED",
         compute_resources={
             "type": "EC2",
-            "minvCpus": 4,
+            "minvCpus": 48,
             "maxvCpus": 128,
-            "desiredvCpus": 4,
-            "instanceTypes": ["r5n.xlarge"],
-            "maxvCpus": 10,
+            "desiredvCpus": 48,
+            "instanceTypes": ["r5b.12xlarge"],
+            "maxvCpus": 48,
             "securityGroupIds": ["sg-045c07b461601cd49"],
             "subnets": ["subnet-021fc2b97480c550b"],
             "instanceRole": "ecsInstanceRole",
